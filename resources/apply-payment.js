@@ -2,9 +2,10 @@ export const applyPayment = async (req, res, next) => {
   const { paymentSystem, otkr_sbp_type, successUrl } = req.body;
 
   if (!paymentSystem) {
-    res.set("Location", successUrl);
-
-    return res.status(302).end();
+    return res.status(200).json({
+      orderId: "1231231231231",
+      formUrl: "bank",
+    });
   }
 
   if (otkr_sbp_type === 2) {
