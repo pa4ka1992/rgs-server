@@ -1,1 +1,1 @@
-# rgs-server
+# rgp-app
