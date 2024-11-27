@@ -7,7 +7,7 @@ export const applyPayment = async (req, res, next) => {
     return res.status(302).end();
   }
 
-  if (otkr_sbp_type === 1) {
+  if (otkr_sbp_type === 2) {
     return res.status(200).json({
       orderId: "1231231231231",
       formUrl:
